@@ -336,8 +336,13 @@ class ProtoElement(object):
     FIELD = 2
     MESSAGE = 4
     ENUM = 5
+    # Mycode: ServiceDescriptorProto
+    SERVICE = 6
     NESTED_TYPE = 3
     NESTED_ENUM = 4
+
+    # Mycode: MethodDescriptorProto
+    METHOD = 2
 
     def __init__(self, path, comments = None):
         '''
@@ -387,7 +392,24 @@ class ProtoElement(object):
 
         return leading_comment, trailing_comment
 
+# Mycode: ServiceDescriptorProto类实现
+class Service(ProtoElement):
+    def __init__(self, names, desc, service_options, element_path, comments):
+        '''
+        desc is ServiceDescriptorProto类实现
+        index is the index of this service element inside the file
+        comments is a dictionary mapping between element path & SourceCodeInfo.Location
+            (contains information about source comments)
+        '''
+        super(Service, self).__init__(element_path, comments)
+        
+        # Mark: service options are not supported yet
+        self.options = None
+        
+        self.names = names
 
+
+       
 class Enum(ProtoElement):
     def __init__(self, names, desc, enum_options, element_path, comments):
         '''
@@ -555,7 +577,7 @@ class Field(ProtoElement):
         self.callback_datatype = field_options.callback_datatype
         self.math_include_required = False
         self.sort_by_tag = field_options.sort_by_tag
-        
+
         if field_options.type == nanopb_pb2.FT_INLINE:
             # Before nanopb-0.3.8, fixed length bytes arrays were specified
             # by setting type to FT_INLINE. But to handle pointer typed fields,
@@ -1625,21 +1647,26 @@ class Message(ProtoElement):
 
 def iterate_messages(desc, flatten = False, names = Names(), comment_path = ()):
     '''Recursively find all messages. For each, yield name, DescriptorProto, comment_path.'''
+    # 对于FileDescriptorProto,其中的message字段为message_type
     if hasattr(desc, 'message_type'):
         submsgs = desc.message_type
         comment_path += (ProtoElement.MESSAGE,)
+    # 对于DescriptorProto,其中的message字段为nested_type
     else:
         submsgs = desc.nested_type
         comment_path += (ProtoElement.NESTED_TYPE,)
 
+    # 对repeated字段迭代
     for idx, submsg in enumerate(submsgs):
         sub_names = names + submsg.name
         sub_path = comment_path + (idx,)
+        #若要进行展开,则会把名字的每个部分用'_'连接起来
         if flatten:
             yield Names(submsg.name), submsg, sub_path
         else:
             yield sub_names, submsg, sub_path
 
+        # 递归查找message内嵌套的message
         for x in iterate_messages(submsg, flatten, sub_names, sub_path):
             yield x
 
@@ -1650,6 +1677,7 @@ def iterate_extensions(desc, flatten = False, names = Names()):
     for extension in desc.extension:
         yield names, extension
 
+    #extension本身可以包含extension,需要递归查找
     for subname, subdesc, comment_path in iterate_messages(desc, flatten, names):
         for extension in subdesc.extension:
             yield subname, extension
@@ -1792,6 +1820,8 @@ class ProtoFile:
         self.messages = []
         self.extensions = []
         self.manglenames = MangleNames(self.fdesc, self.file_options)
+        # mycode：添加服务字段
+        self.services = []
 
         # process source code comment locations
         # ignores any locations that do not contain any comment information
@@ -1801,6 +1831,7 @@ class ProtoFile:
             if location.leading_comments or location.leading_detached_comments or location.trailing_comments
         }
 
+        # 枚举类型不会嵌套包含,可以直接转换为enumerate进行遍历
         for index, enum in enumerate(self.fdesc.enum_type):
             name = self.manglenames.create_name(enum.name)
             enum_options = get_nanopb_suboptions(enum, self.file_options, name)
@@ -1836,6 +1867,15 @@ class ProtoFile:
 
             if field_options.type != nanopb_pb2.FT_IGNORE:
                 self.extensions.append(ExtensionField(name, extension, field_options))
+
+        # mycode： 解析服务字段
+        # service类型不会嵌套包含,可以直接转换为enumerate进行遍历
+        for index, service in enumerate(self.fdesc.service):
+            name = self.manglenames.create_name(service.name)
+            # Mark: 不支持service的options
+            service_path = (ProtoElement.SERVICE, index)
+            self.enums.append(Service(name, service, None, service_path, self.comment_locations))
+
 
     def add_dependency(self, other):
         for enum in other.enums:
@@ -2220,6 +2260,7 @@ def get_nanopb_suboptions(subdesc, options, name):
         ext_type = nanopb_pb2.nanopb_msgopt
     elif isinstance(subdesc.options, descriptor.EnumOptions):
         ext_type = nanopb_pb2.nanopb_enumopt
+    #Mark： service options are not supported
     else:
         raise Exception("Unknown options type")
 
