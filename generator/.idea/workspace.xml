@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ab5e5a8c-0238-44ac-8548-ef8c6346cffb" name="变更" comment="CRLF">
+      <change beforePath="$PROJECT_DIR$/../.github/workflows/bazel.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../.github/workflows/bazel.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.github/workflows/binary_packages.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../.github/workflows/binary_packages.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.github/workflows/cifuzz.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../.github/workflows/cifuzz.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.github/workflows/compiler_tests.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../.github/workflows/compiler_tests.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.github/workflows/ios_swift_tests.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../.github/workflows/ios_swift_tests.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.github/workflows/platformio_tests.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../.github/workflows/platformio_tests.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.github/workflows/pypi_publish.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../.github/workflows/pypi_publish.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.github/workflows/python2_tests.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../.github/workflows/python2_tests.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.github/workflows/simulator_tests.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../.github/workflows/simulator_tests.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.github/workflows/trigger_on_code_change.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../.github/workflows/trigger_on_code_change.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.github/workflows/trigger_on_schedule.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../.github/workflows/trigger_on_schedule.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AUTHORS.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../AUTHORS.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BUILD.bazel" beforeDir="false" afterPath="$PROJECT_DIR$/../BUILD.bazel" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CHANGELOG.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../CHANGELOG.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CONTRIBUTING.md" beforeDir="false" afterPath="$PROJECT_DIR$/../CONTRIBUTING.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../LICENSE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Package.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../Package.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WORKSPACE" beforeDir="false" afterPath="$PROJECT_DIR$/../WORKSPACE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build.py" beforeDir="false" afterPath="$PROJECT_DIR$/../build.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../conan-wrapper/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../conan-wrapper/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../conanfile.py" beforeDir="false" afterPath="$PROJECT_DIR$/../conanfile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docs/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../docs/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docs/bazel_build.md" beforeDir="false" afterPath="$PROJECT_DIR$/../docs/bazel_build.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docs/concepts.md" beforeDir="false" afterPath="$PROJECT_DIR$/../docs/concepts.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docs/feedback.html" beforeDir="false" afterPath="$PROJECT_DIR$/../docs/feedback.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docs/generator_flow.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../docs/generator_flow.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docs/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/../docs/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docs/logo/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../docs/logo/logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docs/lsr.css" beforeDir="false" afterPath="$PROJECT_DIR$/../docs/lsr.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docs/migration.md" beforeDir="false" afterPath="$PROJECT_DIR$/../docs/migration.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docs/reference.md" beforeDir="false" afterPath="$PROJECT_DIR$/../docs/reference.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docs/security.md" beforeDir="false" afterPath="$PROJECT_DIR$/../docs/security.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docs/whats_new.md" beforeDir="false" afterPath="$PROJECT_DIR$/../docs/whats_new.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examples/cmake_relpath/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../examples/cmake_relpath/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examples/cmake_relpath/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../examples/cmake_relpath/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examples/cmake_relpath/proto/simple.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../examples/cmake_relpath/proto/simple.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examples/cmake_relpath/proto/sub/unlucky.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../examples/cmake_relpath/proto/sub/unlucky.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examples/cmake_relpath/simple.c" beforeDir="false" afterPath="$PROJECT_DIR$/../examples/cmake_relpath/simple.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examples/cmake_simple/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../examples/cmake_simple/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examples/cmake_simple/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../examples/cmake_simple/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examples/cmake_simple/simple.c" beforeDir="false" afterPath="$PROJECT_DIR$/../examples/cmake_simple/simple.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examples/cmake_simple/simple.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../examples/cmake_simple/simple.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examples/conan_dependency/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../examples/conan_dependency/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examples/conan_dependency/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../examples/conan_dependency/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examples/conan_dependency/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../examples/conan_dependency/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examples/conan_dependency/conanfile.py" beforeDir="false" afterPath="$PROJECT_DIR$/../examples/conan_dependency/conanfile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examples/conan_dependency/protos/simple.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../examples/conan_dependency/protos/simple.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examples/conan_dependency/src/simple.c" beforeDir="false" afterPath="$PROJECT_DIR$/../examples/conan_dependency/src/simple.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examples/network_server/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../examples/network_server/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examples/network_server/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../examples/network_server/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examples/network_server/client.c" beforeDir="false" afterPath="$PROJECT_DIR$/../examples/network_server/client.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examples/network_server/common.c" beforeDir="false" afterPath="$PROJECT_DIR$/../examples/network_server/common.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examples/network_server/common.h" beforeDir="false" afterPath="$PROJECT_DIR$/../examples/network_server/common.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examples/network_server/fileproto.options" beforeDir="false" afterPath="$PROJECT_DIR$/../examples/network_server/fileproto.options" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examples/network_server/fileproto.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../examples/network_server/fileproto.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examples/network_server/server.c" beforeDir="false" afterPath="$PROJECT_DIR$/../examples/network_server/server.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examples/platformio/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../examples/platformio/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examples/platformio/platformio.ini" beforeDir="false" afterPath="$PROJECT_DIR$/../examples/platformio/platformio.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examples/platformio/proto/pio_with_options.options" beforeDir="false" afterPath="$PROJECT_DIR$/../examples/platformio/proto/pio_with_options.options" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examples/platformio/proto/pio_with_options.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../examples/platformio/proto/pio_with_options.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examples/platformio/proto/pio_without_options.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../examples/platformio/proto/pio_without_options.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examples/platformio/src/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../examples/platformio/src/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examples/platformio/src/pio_esp32_idf.c" beforeDir="false" afterPath="$PROJECT_DIR$/../examples/platformio/src/pio_esp32_idf.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examples/platformio/src/pio_with_options.c" beforeDir="false" afterPath="$PROJECT_DIR$/../examples/platformio/src/pio_with_options.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examples/platformio/src/pio_without_options.c" beforeDir="false" afterPath="$PROJECT_DIR$/../examples/platformio/src/pio_without_options.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examples/platformio/src/test.h" beforeDir="false" afterPath="$PROJECT_DIR$/../examples/platformio/src/test.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examples/simple/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../examples/simple/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examples/simple/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../examples/simple/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examples/simple/simple.c" beforeDir="false" afterPath="$PROJECT_DIR$/../examples/simple/simple.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examples/simple/simple.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../examples/simple/simple.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examples/using_union_messages/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../examples/using_union_messages/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examples/using_union_messages/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../examples/using_union_messages/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examples/using_union_messages/decode.c" beforeDir="false" afterPath="$PROJECT_DIR$/../examples/using_union_messages/decode.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examples/using_union_messages/encode.c" beforeDir="false" afterPath="$PROJECT_DIR$/../examples/using_union_messages/encode.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examples/using_union_messages/unionproto.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../examples/using_union_messages/unionproto.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../extra/FindNanopb.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../extra/FindNanopb.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../extra/bazel/nanopb_cc_proto_library.bzl" beforeDir="false" afterPath="$PROJECT_DIR$/../extra/bazel/nanopb_cc_proto_library.bzl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../extra/bazel/nanopb_deps.bzl" beforeDir="false" afterPath="$PROJECT_DIR$/../extra/bazel/nanopb_deps.bzl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../extra/bazel/nanopb_workspace.bzl" beforeDir="false" afterPath="$PROJECT_DIR$/../extra/bazel/nanopb_workspace.bzl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../extra/bazel/python_deps.bzl" beforeDir="false" afterPath="$PROJECT_DIR$/../extra/bazel/python_deps.bzl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../extra/nanopb-config-version.cmake.in" beforeDir="false" afterPath="$PROJECT_DIR$/../extra/nanopb-config-version.cmake.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../extra/nanopb-config.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../extra/nanopb-config.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../extra/nanopb.mk" beforeDir="false" afterPath="$PROJECT_DIR$/../extra/nanopb.mk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../extra/pb_syshdr.h" beforeDir="false" afterPath="$PROJECT_DIR$/../extra/pb_syshdr.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../extra/poetry/poetry_build.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../extra/poetry/poetry_build.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../extra/poetry/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/../extra/poetry/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../extra/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../extra/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../extra/requirements_lock.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../extra/requirements_lock.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nanopb_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/nanopb_generator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../library.json" beforeDir="false" afterPath="$PROJECT_DIR$/../library.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pb.h" beforeDir="false" afterPath="$PROJECT_DIR$/../pb.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pb_common.c" beforeDir="false" afterPath="$PROJECT_DIR$/../pb_common.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pb_common.h" beforeDir="false" afterPath="$PROJECT_DIR$/../pb_common.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pb_decode.c" beforeDir="false" afterPath="$PROJECT_DIR$/../pb_decode.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pb_decode.h" beforeDir="false" afterPath="$PROJECT_DIR$/../pb_decode.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pb_encode.c" beforeDir="false" afterPath="$PROJECT_DIR$/../pb_encode.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pb_encode.h" beforeDir="false" afterPath="$PROJECT_DIR$/../pb_encode.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spm-test/objc/c-header.c" beforeDir="false" afterPath="$PROJECT_DIR$/../spm-test/objc/c-header.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spm-test/objc/objc-header.m" beforeDir="false" afterPath="$PROJECT_DIR$/../spm-test/objc/objc-header.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spm-test/objc/objc-module.m" beforeDir="false" afterPath="$PROJECT_DIR$/../spm-test/objc/objc-module.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spm-test/objc/objc-qualified.m" beforeDir="false" afterPath="$PROJECT_DIR$/../spm-test/objc/objc-qualified.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spm-test/swift/main.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../spm-test/swift/main.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spm_headers/pb.h" beforeDir="false" afterPath="$PROJECT_DIR$/../spm_headers/pb.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spm_headers/pb_common.h" beforeDir="false" afterPath="$PROJECT_DIR$/../spm_headers/pb_common.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spm_headers/pb_decode.h" beforeDir="false" afterPath="$PROJECT_DIR$/../spm_headers/pb_decode.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spm_headers/pb_encode.h" beforeDir="false" afterPath="$PROJECT_DIR$/../spm_headers/pb_encode.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/SConstruct" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/SConstruct" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/alltypes/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/alltypes/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/alltypes/alltypes.options" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/alltypes/alltypes.options" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/alltypes/alltypes.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/alltypes/alltypes.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/alltypes/decode_alltypes.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/alltypes/decode_alltypes.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/alltypes/encode_alltypes.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/alltypes/encode_alltypes.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/alltypes_callback/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/alltypes_callback/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/alltypes_callback/alltypes.options" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/alltypes_callback/alltypes.options" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/alltypes_callback/decode_alltypes_callback.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/alltypes_callback/decode_alltypes_callback.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/alltypes_callback/encode_alltypes_callback.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/alltypes_callback/encode_alltypes_callback.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/alltypes_pointer/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/alltypes_pointer/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/alltypes_pointer/alltypes.options" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/alltypes_pointer/alltypes.options" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/alltypes_pointer/decode_alltypes_pointer.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/alltypes_pointer/decode_alltypes_pointer.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/alltypes_pointer/encode_alltypes_pointer.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/alltypes_pointer/encode_alltypes_pointer.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/alltypes_proto3/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/alltypes_proto3/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/alltypes_proto3/alltypes.options" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/alltypes_proto3/alltypes.options" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/alltypes_proto3/alltypes.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/alltypes_proto3/alltypes.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/alltypes_proto3/decode_alltypes.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/alltypes_proto3/decode_alltypes.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/alltypes_proto3/encode_alltypes.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/alltypes_proto3/encode_alltypes.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/alltypes_proto3_callback/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/alltypes_proto3_callback/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/alltypes_proto3_callback/alltypes.options" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/alltypes_proto3_callback/alltypes.options" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/alltypes_proto3_callback/decode_alltypes_callback.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/alltypes_proto3_callback/decode_alltypes_callback.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/alltypes_proto3_callback/encode_alltypes_callback.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/alltypes_proto3_callback/encode_alltypes_callback.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/anonymous_oneof/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/anonymous_oneof/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/anonymous_oneof/decode_oneof.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/anonymous_oneof/decode_oneof.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/anonymous_oneof/oneof.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/anonymous_oneof/oneof.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/any_type/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/any_type/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/any_type/anytest.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/any_type/anytest.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/any_type/decode_any.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/any_type/decode_any.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/any_type/encode_any.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/any_type/encode_any.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/any_type/google/protobuf/any.options" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/any_type/google/protobuf/any.options" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/any_type/google/protobuf/any.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/any_type/google/protobuf/any.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/any_type/google/protobuf/duration.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/any_type/google/protobuf/duration.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/backwards_compatibility/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/backwards_compatibility/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/backwards_compatibility/alltypes_legacy.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/backwards_compatibility/alltypes_legacy.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/backwards_compatibility/alltypes_legacy.h" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/backwards_compatibility/alltypes_legacy.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/backwards_compatibility/alltypes_legacy.options" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/backwards_compatibility/alltypes_legacy.options" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/backwards_compatibility/alltypes_legacy.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/backwards_compatibility/alltypes_legacy.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/backwards_compatibility/decode_legacy.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/backwards_compatibility/decode_legacy.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/backwards_compatibility/encode_legacy.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/backwards_compatibility/encode_legacy.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/basic_buffer/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/basic_buffer/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/basic_buffer/decode_buffer.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/basic_buffer/decode_buffer.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/basic_buffer/encode_buffer.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/basic_buffer/encode_buffer.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/basic_stream/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/basic_stream/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/basic_stream/decode_stream.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/basic_stream/decode_stream.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/basic_stream/encode_stream.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/basic_stream/encode_stream.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/buffer_only/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/buffer_only/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/callbacks/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/callbacks/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/callbacks/callbacks.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/callbacks/callbacks.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/callbacks/decode_callbacks.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/callbacks/decode_callbacks.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/callbacks/encode_callbacks.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/callbacks/encode_callbacks.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/comments/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/comments/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/comments/comments.expected" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/comments/comments.expected" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/comments/comments.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/comments/comments.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/common/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/common/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/common/malloc_wrappers.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/common/malloc_wrappers.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/common/malloc_wrappers.h" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/common/malloc_wrappers.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/common/malloc_wrappers_syshdr.h" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/common/malloc_wrappers_syshdr.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/common/person.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/common/person.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/common/test_helpers.h" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/common/test_helpers.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/common/unittestproto.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/common/unittestproto.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/common/unittests.h" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/common/unittests.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/common_unittests/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/common_unittests/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/common_unittests/common_unittests.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/common_unittests/common_unittests.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/cxx_callback_datatype/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/cxx_callback_datatype/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/cxx_callback_datatype/cxx_callback_datatype.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/cxx_callback_datatype/cxx_callback_datatype.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/cxx_callback_datatype/message.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/cxx_callback_datatype/message.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/cxx_descriptor/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/cxx_descriptor/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/cxx_descriptor/message.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/cxx_descriptor/message.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/cxx_descriptor/message_descriptor.cc" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/cxx_descriptor/message_descriptor.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/cxx_main_program/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/cxx_main_program/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/cyclic_messages/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/cyclic_messages/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/cyclic_messages/cyclic.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/cyclic_messages/cyclic.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/cyclic_messages/cyclic_callback.options" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/cyclic_messages/cyclic_callback.options" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/cyclic_messages/encode_cyclic_callback.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/cyclic_messages/encode_cyclic_callback.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/decode_unittests/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/decode_unittests/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/decode_unittests/decode_unittests.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/decode_unittests/decode_unittests.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/docker_images/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/docker_images/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/docker_images/build_all.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/docker_images/build_all.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/docker_images/ubuntu1804/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/docker_images/ubuntu1804/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/docker_images/ubuntu2004/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/docker_images/ubuntu2004/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/encode_arrays_unpacked/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/encode_arrays_unpacked/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/encode_unittests/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/encode_unittests/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/encode_unittests/encode_unittests.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/encode_unittests/encode_unittests.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/enum_mapping/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/enum_mapping/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/enum_mapping/enum_mapping.expected" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/enum_mapping/enum_mapping.expected" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/enum_mapping/enum_mapping.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/enum_mapping/enum_mapping.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/enum_minmax/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/enum_minmax/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/enum_minmax/enumminmax.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/enum_minmax/enumminmax.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/enum_minmax/enumminmax_unittests.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/enum_minmax/enumminmax_unittests.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/enum_sizes/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/enum_sizes/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/enum_sizes/enumsizes.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/enum_sizes/enumsizes.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/enum_sizes/enumsizes_unittests.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/enum_sizes/enumsizes_unittests.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/enum_to_string/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/enum_to_string/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/enum_to_string/enum.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/enum_to_string/enum.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/enum_to_string/enum_to_string.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/enum_to_string/enum_to_string.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/extensions/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/extensions/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/extensions/decode_extensions.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/extensions/decode_extensions.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/extensions/encode_extensions.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/extensions/encode_extensions.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/extensions/extensions.options" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/extensions/extensions.options" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/extensions/extensions.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/extensions/extensions.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/extra_fields/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/extra_fields/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/extra_fields/person_with_extra_field.expected" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/extra_fields/person_with_extra_field.expected" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/fallback_type/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/fallback_type/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/fallback_type/fallback_type.expected" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/fallback_type/fallback_type.expected" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/fallback_type/fallback_type.options" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/fallback_type/fallback_type.options" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/fallback_type/fallback_type.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/fallback_type/fallback_type.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/field_size_16/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/field_size_16/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/field_size_16/alltypes.options" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/field_size_16/alltypes.options" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/field_size_16/alltypes.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/field_size_16/alltypes.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/field_size_16_proto3/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/field_size_16_proto3/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/field_size_16_proto3/alltypes.options" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/field_size_16_proto3/alltypes.options" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/field_size_16_proto3/alltypes.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/field_size_16_proto3/alltypes.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/field_size_16_proto3/decode_alltypes.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/field_size_16_proto3/decode_alltypes.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/field_size_16_proto3/encode_alltypes.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/field_size_16_proto3/encode_alltypes.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/field_size_32/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/field_size_32/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/field_size_32/alltypes.options" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/field_size_32/alltypes.options" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/field_size_32/alltypes.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/field_size_32/alltypes.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/fixed_count/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/fixed_count/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/fixed_count/fixed_count.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/fixed_count/fixed_count.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/fixed_count/fixed_count_unittests.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/fixed_count/fixed_count_unittests.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/float_double_conversion/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/float_double_conversion/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/float_double_conversion/doublemsg.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/float_double_conversion/doublemsg.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/float_double_conversion/float_double_conversion.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/float_double_conversion/float_double_conversion.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/fuzztest/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/fuzztest/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/fuzztest/alltypes_callback.options" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/fuzztest/alltypes_callback.options" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/fuzztest/alltypes_pointer.options" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/fuzztest/alltypes_pointer.options" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/fuzztest/alltypes_proto3_pointer.options" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/fuzztest/alltypes_proto3_pointer.options" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/fuzztest/alltypes_proto3_static.options" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/fuzztest/alltypes_proto3_static.options" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/fuzztest/alltypes_static.options" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/fuzztest/alltypes_static.options" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/fuzztest/flakystream.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/fuzztest/flakystream.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/fuzztest/flakystream.h" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/fuzztest/flakystream.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/fuzztest/fuzztest.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/fuzztest/fuzztest.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/fuzztest/generate_message.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/fuzztest/generate_message.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/fuzztest/ossfuzz.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/fuzztest/ossfuzz.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/fuzztest/random_data.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/fuzztest/random_data.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/fuzztest/random_data.h" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/fuzztest/random_data.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/fuzztest/update_corpus.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/fuzztest/update_corpus.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/fuzztest/validation.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/fuzztest/validation.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/fuzztest/validation.h" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/fuzztest/validation.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/generator_relative_paths/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/generator_relative_paths/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/generator_relative_paths/any.expected" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/generator_relative_paths/any.expected" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/generator_relative_paths/proto/protobuf/any.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/generator_relative_paths/proto/protobuf/any.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/generator_relative_paths/proto/simple.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/generator_relative_paths/proto/simple.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/generator_relative_paths/simple.expected" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/generator_relative_paths/simple.expected" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/generator_relative_paths/test.expected" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/generator_relative_paths/test.expected" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/generator_relative_paths/test.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/generator_relative_paths/test.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/infinity_nan/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/infinity_nan/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/infinity_nan/floats.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/infinity_nan/floats.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/infinity_nan/infinity_nan_test.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/infinity_nan/infinity_nan_test.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/inline/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/inline/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/inline/inline.expected" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/inline/inline.expected" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/inline/inline.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/inline/inline.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/inline/inline_unittests.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/inline/inline_unittests.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/intsizes/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/intsizes/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/intsizes/intsizes.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/intsizes/intsizes.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/intsizes/intsizes_unittests.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/intsizes/intsizes_unittests.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/io_errors/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/io_errors/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/io_errors/alltypes.options" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/io_errors/alltypes.options" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/io_errors/io_errors.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/io_errors/io_errors.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/io_errors_pointers/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/io_errors_pointers/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/io_errors_pointers/alltypes.options" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/io_errors_pointers/alltypes.options" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/map/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/map/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/map/decode_map.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/map/decode_map.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/map/encode_map.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/map/encode_map.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/map/map.options" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/map/map.options" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/map/map.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/map/map.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/mem_release/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/mem_release/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/mem_release/mem_release.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/mem_release/mem_release.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/mem_release/mem_release.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/mem_release/mem_release.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/message_sizes/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/message_sizes/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/message_sizes/dummy.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/message_sizes/dummy.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/message_sizes/messages1.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/message_sizes/messages1.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/message_sizes/messages2.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/message_sizes/messages2.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/missing_fields/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/missing_fields/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/missing_fields/missing_fields.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/missing_fields/missing_fields.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/missing_fields/missing_fields.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/missing_fields/missing_fields.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/msgid/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/msgid/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/msgid/decode_msgid.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/msgid/decode_msgid.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/msgid/encode_msgid.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/msgid/encode_msgid.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/msgid/msgid_example.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/msgid/msgid_example.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/multiple_files/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/multiple_files/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/multiple_files/multifile1.options" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/multiple_files/multifile1.options" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/multiple_files/multifile1.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/multiple_files/multifile1.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/multiple_files/multifile2.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/multiple_files/multifile2.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/multiple_files/subdir/multifile2.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/multiple_files/subdir/multifile2.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/multiple_files/test_multiple_files.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/multiple_files/test_multiple_files.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/namingstyle/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/namingstyle/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/namingstyle/naming_style.options" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/namingstyle/naming_style.options" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/namingstyle/naming_style.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/namingstyle/naming_style.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/namingstyle/test_naming_style_c.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/namingstyle/test_naming_style_c.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/no_errmsg/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/no_errmsg/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/no_messages/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/no_messages/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/no_messages/no_messages.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/no_messages/no_messages.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/oneof/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/oneof/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/oneof/decode_oneof.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/oneof/decode_oneof.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/oneof/encode_oneof.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/oneof/encode_oneof.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/oneof/oneof.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/oneof/oneof.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/oneof_callback/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/oneof_callback/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/oneof_callback/decode_oneof.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/oneof_callback/decode_oneof.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/oneof_callback/encode_oneof.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/oneof_callback/encode_oneof.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/oneof_callback/oneof.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/oneof_callback/oneof.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/options/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/options/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/options/options.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/options/options.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/options/options.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/options/options.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/options/options_c.expected" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/options/options_c.expected" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/options/options_h.expected" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/options/options_h.expected" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/options/proto3_options.expected" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/options/proto3_options.expected" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/options/proto3_options.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/options/proto3_options.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/package_name/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/package_name/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/package_name_nanopb/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/package_name_nanopb/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/proto3_optional/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/proto3_optional/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/proto3_optional/optional.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/proto3_optional/optional.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/proto3_optional/optional.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/proto3_optional/optional.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/raw_decode/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/raw_decode/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/raw_decode/raw_decode.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/raw_decode/raw_decode.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/GHSA-gcx3-7m76-287p/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/GHSA-gcx3-7m76-287p/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/GHSA-gcx3-7m76-287p/test.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/GHSA-gcx3-7m76-287p/test.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/GHSA-gcx3-7m76-287p/test.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/GHSA-gcx3-7m76-287p/test.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_118/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_118/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_118/enumdef.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_118/enumdef.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_118/enumuse.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_118/enumuse.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_125/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_125/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_125/extensionbug.expected" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_125/extensionbug.expected" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_125/extensionbug.options" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_125/extensionbug.options" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_125/extensionbug.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_125/extensionbug.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_141/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_141/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_141/testproto.expected" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_141/testproto.expected" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_141/testproto.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_141/testproto.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_145/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_145/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_145/comments.expected" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_145/comments.expected" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_145/comments.options" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_145/comments.options" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_145/comments.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_145/comments.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_166/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_166/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_166/enum_encoded_size.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_166/enum_encoded_size.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_166/enums.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_166/enums.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_172/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_172/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_172/msg_size.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_172/msg_size.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_172/submessage/submessage.options" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_172/submessage/submessage.options" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_172/submessage/submessage.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_172/submessage/submessage.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_172/test.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_172/test.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_188/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_188/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_188/oneof.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_188/oneof.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_195/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_195/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_195/test.expected" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_195/test.expected" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_195/test.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_195/test.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_203/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_203/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_203/file1.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_203/file1.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_203/file2.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_203/file2.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_205/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_205/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_205/size_corruption.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_205/size_corruption.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_205/size_corruption.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_205/size_corruption.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_227/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_227/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_227/unaligned_uint64.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_227/unaligned_uint64.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_227/unaligned_uint64.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_227/unaligned_uint64.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_229/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_229/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_229/multiple_oneof.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_229/multiple_oneof.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_229/multiple_oneof.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_229/multiple_oneof.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_242/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_242/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_242/zero_value.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_242/zero_value.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_242/zero_value.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_242/zero_value.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_247/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_247/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_247/padding.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_247/padding.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_247/padding.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_247/padding.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_249/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_249/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_249/test.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_249/test.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_249/test.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_249/test.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_253/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_253/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_253/short_array.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_253/short_array.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_253/short_array.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_253/short_array.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_256/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_256/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_256/submsg_array.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_256/submsg_array.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_256/submsg_array.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_256/submsg_array.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_259/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_259/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_259/callback_pointer.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_259/callback_pointer.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_259/callback_pointer.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_259/callback_pointer.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_306/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_306/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_306/large_extension.expected" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_306/large_extension.expected" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_306/large_extension.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_306/large_extension.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_322/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_322/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_322/defaults.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_322/defaults.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_322/defaults.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_322/defaults.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_338/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_338/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_338/bigvalue.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_338/bigvalue.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_342/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_342/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_342/extensions.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_342/extensions.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_342/test_extensions.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_342/test_extensions.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_363/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_363/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_363/oneofmsg.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_363/oneofmsg.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_363/test_oneofmsg.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_363/test_oneofmsg.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_376/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_376/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_376/fixed_array.options" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_376/fixed_array.options" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_376/fixed_array.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_376/fixed_array.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_376/test_fixarray.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_376/test_fixarray.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_380/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_380/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_380/manglenames.options" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_380/manglenames.options" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_380/manglenames.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_380/manglenames.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_395/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_395/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_395/test.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_395/test.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_395/test.options" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_395/test.options" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_395/test.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_395/test.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_407/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_407/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_407/extensions.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_407/extensions.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_407/test_extensions.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_407/test_extensions.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_453/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_453/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_453/test.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_453/test.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_453/test.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_453/test.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_472/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_472/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_472/test.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_472/test.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_485/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_485/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_485/uint8.expected" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_485/uint8.expected" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_487/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_487/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_487/test.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_487/test.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_493/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_493/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_493/test.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_493/test.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_494/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_494/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_494/oneof.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_494/oneof.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_494/oneof_size.cc" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_494/oneof_size.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_494/submessage.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_494/submessage.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_504/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_504/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_504/test.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_504/test.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_504/test.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_504/test.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_522/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_522/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_522/uenum.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_522/uenum.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_524/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_524/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_524/oneof.expected" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_524/oneof.expected" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_524/oneof.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_524/oneof.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_524/submessage.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_524/submessage.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_535/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_535/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_535/issue_535.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_535/issue_535.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_544/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_544/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_544/submsg_callback.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_544/submsg_callback.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_544/submsg_callback.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_544/submsg_callback.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_545/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_545/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_545/submsg_callback.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_545/submsg_callback.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_547/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_547/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_547/test.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_547/test.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_547/test.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_547/test.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_558/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_558/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_558/mixed.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_558/mixed.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_558/mixed.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_558/mixed.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_569/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_569/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_569/a.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_569/a.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_569/b.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_569/b.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_610/DataPacket.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_610/DataPacket.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_610/LogMessage.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_610/LogMessage.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_610/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_610/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_610/first.expected" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_610/first.expected" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_610/nanopb_generator_bug/first.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_610/nanopb_generator_bug/first.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_610/nanopb_generator_bug/first/a.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_610/nanopb_generator_bug/first/a.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_610/nanopb_generator_bug/first/a/aa.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_610/nanopb_generator_bug/first/a/aa.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_610/nanopb_generator_bug/first/a/ab.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_610/nanopb_generator_bug/first/a/ab.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_610/nanopb_generator_bug/first/b.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_610/nanopb_generator_bug/first/b.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_610/nanopb_generator_bug/first/b/ba.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_610/nanopb_generator_bug/first/b/ba.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_611/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_611/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_611/uenum.expected" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_611/uenum.expected" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_611/uenum.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_611/uenum.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_617/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_617/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_617/oneof.options" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_617/oneof.options" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_617/oneof.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_617/oneof.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_617/test_oneof.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_617/test_oneof.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_631/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_631/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_631/submsg_callback.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_631/submsg_callback.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_631/test.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_631/test.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_637/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_637/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_637/oneof.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_637/oneof.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_637/other.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_637/other.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_637/test.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_637/test.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_644/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_644/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_644/int64.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_644/int64.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_647/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_647/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_647/repro.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_647/repro.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_647/repro.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_647/repro.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_692/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_692/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_692/oneof.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_692/oneof.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_692/other.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_692/other.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_692/test.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_692/test.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_746/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_746/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_746/test.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_746/test.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_783/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_783/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_783/folder_A/file_A.options" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_783/folder_A/file_A.options" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_783/folder_A/file_A.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_783/folder_A/file_A.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_783/folder_B/file_B.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_783/folder_B/file_B.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_783/folder_C/file_C.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_783/folder_C/file_C.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_795/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_795/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_795/test.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_795/test.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_795/test2.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_795/test2.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_795/test3.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_795/test3.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_838/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_838/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_838/enum.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_838/enum.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/regression/issue_838/enum_to_string.cxx" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/regression/issue_838/enum_to_string.cxx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/site_scons/platforms/avr/avr.py" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/site_scons/platforms/avr/avr.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/site_scons/platforms/avr/avr_io.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/site_scons/platforms/avr/avr_io.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/site_scons/platforms/avr/run_test.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/site_scons/platforms/avr/run_test.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/site_scons/platforms/mips/mips.py" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/site_scons/platforms/mips/mips.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/site_scons/platforms/mipsel/mipsel.py" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/site_scons/platforms/mipsel/mipsel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/site_scons/platforms/riscv64/riscv64.py" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/site_scons/platforms/riscv64/riscv64.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/site_scons/platforms/stm32/run_test.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/site_scons/platforms/stm32/run_test.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/site_scons/platforms/stm32/stm32.py" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/site_scons/platforms/stm32/stm32.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/site_scons/platforms/stm32/stm32_ram.ld" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/site_scons/platforms/stm32/stm32_ram.ld" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/site_scons/platforms/stm32/vectors.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/site_scons/platforms/stm32/vectors.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/site_scons/site_init.py" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/site_scons/site_init.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/site_scons/site_tools/nanopb.py" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/site_scons/site_tools/nanopb.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/sort_by_tag/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/sort_by_tag/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/sort_by_tag/sort_by_tag.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/sort_by_tag/sort_by_tag.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/sort_by_tag/sort_by_tag.options" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/sort_by_tag/sort_by_tag.options" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/sort_by_tag/sort_by_tag.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/sort_by_tag/sort_by_tag.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/special_characters/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/special_characters/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/special_characters/funny-proto+name has.characters.options" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/special_characters/funny-proto+name has.characters.options" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/special_characters/funny-proto+name has.characters.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/special_characters/funny-proto+name has.characters.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/special_characters/specchars.expected" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/special_characters/specchars.expected" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/splint/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/splint/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/splint/splint.rc" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/splint/splint.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/stackusage/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/stackusage/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/stackusage/stackusage.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/stackusage/stackusage.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/stackusage/stackusage.options" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/stackusage/stackusage.options" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/stackusage/stackusage.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/stackusage/stackusage.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/typename_mangling/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/typename_mangling/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/typename_mangling/test_flatten.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/typename_mangling/test_flatten.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/typename_mangling/test_package_initials.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/typename_mangling/test_package_initials.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/typename_mangling/test_strip_package.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/typename_mangling/test_strip_package.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/typename_mangling/with_package.options" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/typename_mangling/with_package.options" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/typename_mangling/with_package.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/typename_mangling/with_package.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/validate_utf8/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/validate_utf8/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/without_64bit/SConscript" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/without_64bit/SConscript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/without_64bit/alltypes.options" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/without_64bit/alltypes.options" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/without_64bit/alltypes.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/without_64bit/alltypes.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/without_64bit/decode_alltypes.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/without_64bit/decode_alltypes.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/without_64bit/encode_alltypes.c" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/without_64bit/encode_alltypes.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/without_64bit/no_64bit_syshdr.h" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/without_64bit/no_64bit_syshdr.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tools/list_authors.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../tools/list_authors.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tools/make_linux_package.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../tools/make_linux_package.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tools/make_mac_package.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../tools/make_mac_package.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tools/make_windows_package.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../tools/make_windows_package.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tools/set_version.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../tools/set_version.sh" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RESET_MODE" value="SOFT" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2022.2/remote_sources/739937144/-1171821208/google/protobuf/descriptor.py" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2NyDkTYnj2bYqJWJva2xf9WG26Q" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;//wsl$/Moon/home/huiyeruzhou/Documents/WorkSpace/ESP-IDF/rpc/components/myrpc/nanopb/generator&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="ab5e5a8c-0238-44ac-8548-ef8c6346cffb" name="变更" comment="" />
+      <created>1680627571530</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1680627571530</updated>
+      <workItem from="1680627572929" duration="5273000" />
+      <workItem from="1680637563693" duration="22835000" />
+      <workItem from="1680777151298" duration="1736000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="CRLF" />
+    <option name="LAST_COMMIT_MESSAGE" value="CRLF" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/nanopb_generator.py</url>
+          <line>2683</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/generator$nanopb_generator.coverage" NAME="nanopb_generator 覆盖结果" MODIFIED="1680639538420" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/generator$nanopb_generator__1_.coverage" NAME="nanopb_generator 覆盖结果" MODIFIED="1680640471155" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>

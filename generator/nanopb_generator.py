@@ -392,11 +392,108 @@ class ProtoElement(object):
 
         return leading_comment, trailing_comment
 
+# MyCode : MethodDescriptorProto类实现
+class Method(ProtoElement):
+    def __init__(self, names, desc, method_options, element_path, comments):
+        '''
+        desc is MethodDescriptor
+        index is the index of this method element inside the service
+        comments is a dictionary mapping between element path & SourceCodeInfo.Location
+            (contains information about source comments)
+        '''
+        super(Method, self).__init__(element_path, comments)
+
+        self.longname = names
+        self.service = Names(names.parts[-3:-1])
+        self.names = Names(names.parts[-1])
+        self.input_ctype = names_from_type_name(desc.input_type)
+        self.output_ctype = names_from_type_name(desc.output_type)
+        #Mark Method options are not supported yet
+        self.options = None
+        #Mark: stream are not surpported yet
+        self.client_streaming = desc.client_streaming
+        self.server_streaming = desc.server_streaming
+
+    def method_decl(self):
+        '''
+        Return the declaration of the method
+        void name(input_type *request, output_type *response);
+        '''
+        return '    void %s(%s *request, %s *response)' % (self.names, self.input_ctype, self.output_ctype)
+    def method_enumid(self):
+        '''
+        Return the id of the method
+        id_name = id
+        '''
+        return '%s = %d' % (self.names + 'id', self.element_path[-1])
+
+    def server_stub_decl(self):
+        return 'rpc_status %s_stub(Codec * codec, MessageBufferFactory *messageFactory, uint32_t methodId)' % self.names
+    def server_stub(self):
+        '''
+        Return the server stub of the method
+        '''
+        result = 'rpc_status %s::%s_stub(Codec * codec, MessageBufferFactory *messageFactory, uint32_t sequence)' % (self.service, self.names) + ' {\n'
+        result += '    //serilaize request message\n'
+        result += '    %s request = %s_init_default;\n' % (self.input_ctype, self.input_ctype)
+        result += '    pb_istream_t istream = pb_istream_from_buffer(codec->getBuffer()->get(), codec->getBuffer()->getLength());\n'
+        result += '    if(!pb_decode(&istream, %s_fields, &request)){\n' % self.input_ctype
+        result += '        return Fail;\n'
+        result += '    }\n\n'
+        result += '    //call method\n'
+        result += '    %s response = %s_init_default;\n' % (self.output_ctype, self.output_ctype)
+        result += '    %s(&request, &response);\n\n' % self.names
+        result += '    // preparing codec for serializing data\n'
+        result += '    codec->reset();\n'
+        result += '    codec->startWriteMessage(kReplyMessage, m_serviceId, %s, sequence);\n' % (self.names + 'id')
+        result += '    pb_ostream_t ostream = pb_ostream_from_buffer(codec->getBuffer()->get(), codec->getBuffer()->getLength());\n'
+        result += '    if(!pb_encode(&ostream, %s_fields, &response)){\n' % self.output_ctype
+        result += '        return Fail;\n}\n'
+        result += '    return codec->getStatus() ? Success : Fail;\n}'
+        return result
+
+    def client_stub(self):
+        '''
+        Return the stub of the method
+        '''
+        result = 'void %s::%s(%s *req, %s *rsp) {\n' % (self.service + 'Client', self.names, self.input_ctype, self.output_ctype)
+        result += '    rpc_status err = rpc_status::Success;\n\n'
+        result += '    // Get a new request.\n'
+        result += '    RequestContext request = createRequest(false);\n'
+        result += '    // Encode the request.\n'
+        result += '    Codec * codec = request.getCodec();\n'
+        result += '    if (codec == NULL){\n'
+        result += '        err = rpc_status::MemoryError;\n'
+        result += '    }\n'
+        result += '    else{\n'
+        result += '        codec->startWriteMessage(kInvocationMessage, %s, %s, request.getSequence());\n' % ((self.service + 'id'),
+                                                                (Globals.naming_style.enum_name(self.service)+'::'+ self.names + 'id'))
+        result += '        // Serialize the request.\n'
+        result += '        pb_ostream_t ostream = pb_ostream_from_buffer(codec->getBuffer()->get(), codec->getBuffer()->getLength());\n'
+        result += '        if(!pb_encode(&ostream, %s_fields, &req)){\n' % self.input_ctype
+        result += '        }\n'
+        result += '        // Send message to server\n'
+        result += '        performRequest(request);\n'
+        result += '        // Wait for response.\n'
+        result += '        sleep(1);\n'
+        result += '        pb_istream_t istream = pb_istream_from_buffer(codec->getBuffer()->get(), codec->getBuffer()->getLength());\n'
+        result += '        if(!pb_decode(&istream, %s_fields, &rsp)){\n' % self.output_ctype
+        result += '        }\n'
+        result += '    }\n\n'
+        result += '    // Dispose of the request.\n'
+        result += '    releaseRequest(request);\n'
+        result += '    return;\n'
+        result += '}'
+        return result
+
+
+
+
 # Mycode: ServiceDescriptorProto类实现
 class Service(ProtoElement):
     def __init__(self, names, desc, service_options, element_path, comments):
         '''
-        desc is ServiceDescriptorProto类实现
+        desc is ServiceDescripto
         index is the index of this service element inside the file
         comments is a dictionary mapping between element path & SourceCodeInfo.Location
             (contains information about source comments)
@@ -405,11 +502,72 @@ class Service(ProtoElement):
         
         # Mark: service options are not supported yet
         self.options = None
-        
         self.names = names
+        self.package = names.parts[-2]
+        self.methods = [Method(self.names + x.name, x, None, element_path + (self.METHOD, i), comments) for i, x in enumerate(desc.method)]
+
+    def service_class_begin(self):
+        '''
+        Return the beginning of the service class.
+        class name {
+        public:
+            servicename() { super(package_service_id::names_id)) }
+            ~servicename() {}
+            const char* name = "servicename";
+        '''
+        return 'class %s : public erpc::Service{\npublic:\n    %s() : erpc::Service(%s_service_id::%s_id){}\n    ~%s() {}\n    const char* name = "%s";\n' % \
+               (self.names, self.names, Globals.naming_style.enum_name(self.package), self.names, self.names, self.names)
+
+    def service_class_end(self):
+        '''
+        Return the end of the service class.
+        };
+        '''
+        return '    virtual rpc_status handleInvocation(uint32_t methodId, uint32_t sequence, Codec *codec,MessageBufferFactory *messageFactory);\n};\n'
+    def service_enumid(self):
+        '''
+        Return the id of the service
+        id_name = id
+        '''
+        return '%s = %d' % (self.names + 'id', self.element_path[-1])
+
+    def server_stub(self):
+        '''
+        Return the stub of the service
+        '''
+        result = "rpc_status %s::handleInvocation(uint32_t methodId, uint32_t sequence, Codec * codec, MessageBufferFactory *messageFactory){\n" % self.names
+        result += "    switch(methodId){\n"
+        for method in self.methods:
+            result += "        case %s:\n" % (method.names + "id")
+            result += "            return %s_stub(codec, messageFactory, sequence);\n" % method.names
+        result += "        default:\n            return rpc_status::kErpcStatus_UnknownName;\n    }\n}\n"
+        return result
+
+    def client_class_begin(self):
+        '''
+        Return the stub of the client
+        class names : public erpc::Client
+        {
+        public:
+            names(const char *host, uint16_t port, erpc::MessageBufferFactory *messageFactory) : erpc::Client(host, port, messageFactory) {}
+            ~names(){}
+
+        '''
+        client_name = self.names + 'Client'
+        return 'class %s : public erpc::Client{\n'\
+               'public:\n'\
+               '    %s(const char *host, uint16_t port, erpc::MessageBufferFactory *messageFactory) : erpc::Client(host, port, messageFactory) {}\n'\
+               '    ~%s(){}\n' % \
+               (client_name, client_name, client_name)
+
+    def client_class_end(self):
+        '''
+        Return the end of the client class
+        };
+        '''
+        return '};\n'
 
 
-       
 class Enum(ProtoElement):
     def __init__(self, names, desc, enum_options, element_path, comments):
         '''
@@ -1874,7 +2032,7 @@ class ProtoFile:
             name = self.manglenames.create_name(service.name)
             # Mark: 不支持service的options
             service_path = (ProtoElement.SERVICE, index)
-            self.enums.append(Service(name, service, None, service_path, self.comment_locations))
+            self.services.append(Service(name, service, None, service_path, self.comment_locations))
 
 
     def add_dependency(self, other):
@@ -1930,6 +2088,14 @@ class ProtoFile:
             # no %s specified - use whatever was passed in as options.libformat
             yield options.libformat
         yield '\n'
+        # MyCode : 生成service头文件
+        yield  '#include <server/service.hpp>\n'
+        yield  '#include <client/rpc_client.hpp>\n'
+        yield  '#include <codec/codec_base.hpp>\n'
+        yield  '#include <rpc_status.hpp>\n'
+        yield  '#include <pb_encode.h>\n'
+        yield  '#include <pb_decode.h>\n'
+        yield  'using namespace erpc;\n'
 
         for incfile in self.file_options.include:
             # allow including system headers
@@ -2086,6 +2252,44 @@ class ProtoFile:
                   if hasattr(msg,'msgid'):
                       yield '#define %s_msgid %d\n' % (msg.name, msg.msgid)
               yield '\n'
+        # MyCode：Services
+        yield '/* Service ID */\n'
+        yield 'typedef enum {\n'
+        for service in self.services:
+            yield '    %s,\n' % service.service_enumid()
+        yield '} %s_service_id;\n' % Globals.naming_style.enum_name(self.fdesc.package)
+        yield '\n'
+
+        if self.services:
+            yield '/* Service Definations */\n'
+            for service in self.services:
+                yield service.service_class_begin()
+                # declaration
+                for method in service.methods:
+                    yield method.method_decl() + ";"
+                for method in service.methods:
+                    yield method.server_stub_decl() + ";"
+                # id
+                yield '\n'
+                yield '/* Method ID */\n'
+                yield '    typedef enum {\n'
+                for method in service.methods:
+                    yield '    %s,\n' % method.method_enumid()
+                yield '    } %s_method_id;\n' % Globals.naming_style.enum_name(service.names)
+                yield service.service_class_end()
+
+            yield '\n'
+        #Clients
+        yield '/* Client Defination */\n'
+        for service in self.services:
+            yield service.client_class_begin()
+            # declaration
+            for method in service.methods:
+                yield method.method_decl() + ";"
+            yield service.client_class_end()
+
+
+
 
         # Check if there is any name mangling active
         pairs = [x for x in self.manglenames.reverse_name_mapping.items() if str(x[0]) != str(x[1])]
@@ -2191,6 +2395,22 @@ class ProtoFile:
             yield '#endif\n'
 
         yield '\n'
+        
+        # MyCode: Generate stub:
+        if self.services:    
+            yield '/* Server stub */\n'
+            for service in self.services:
+                yield service.server_stub()
+                yield '\n'
+                for method in service.methods:
+                    yield method.server_stub()
+                    yield '\n'
+            yield '\n'
+            yield '/* Client stub */\n'
+            for service in self.services:
+                for method in service.methods:
+                    yield method.client_stub()
+                    yield '\n'
 
         if Globals.protoc_insertion_points:
             yield '/* @@protoc_insertion_point(eof) */\n'
