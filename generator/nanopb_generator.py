@@ -127,6 +127,10 @@ datatypes = {
 }
 
 class NamingStyle:
+    def service_class_name(self, name):
+        return "%s" % (name + 'Service')
+    def client_class_name(self, name):
+        return "%s" % (name + 'Client')
     def enum_name(self, name):
         return "_%s" % (name)
 
@@ -336,8 +340,13 @@ class ProtoElement(object):
     FIELD = 2
     MESSAGE = 4
     ENUM = 5
+    # Mycode: ServiceDescriptorProto
+    SERVICE = 6
     NESTED_TYPE = 3
     NESTED_ENUM = 4
+
+    # Mycode: MethodDescriptorProto
+    METHOD = 2
 
     def __init__(self, path, comments = None):
         '''
@@ -386,6 +395,172 @@ class ProtoElement(object):
             trailing_comment = self.format_comment(comment.trailing_comments)
 
         return leading_comment, trailing_comment
+
+# MyCode : MethodDescriptorProto类实现
+class Method(ProtoElement):
+    def __init__(self, names, desc, method_options, element_path, comments):
+        '''
+        desc is MethodDescriptor
+        index is the index of this method element inside the service
+        comments is a dictionary mapping between element path & SourceCodeInfo.Location
+            (contains information about source comments)
+        '''
+        super(Method, self).__init__(element_path, comments)
+
+        self.longname = names
+        self.service = Names(names.parts[-3:-1])
+        self.service_class_name = Globals.naming_style.service_class_name(self.service)
+        self.client_class_name = Globals.naming_style.client_class_name(self.service)
+        # lookslike : <service_name>_method_names[id]
+        self.method_full_name_refrence = str(self.service + 'method' + 'names') + '[%d]' % self.element_path[-1]
+        # lookslike : /<package_name>.<service_name>/<method_name>
+        self.method_full_name = '/' + str(names.parts[-3]) + '.' + str(names.parts[-2]) + '/' + str(names.parts[-1])
+        self.names = Names(names.parts[-1])
+        self.input_ctype = names_from_type_name(desc.input_type)
+        self.output_ctype = names_from_type_name(desc.output_type)
+        #Mark Method options are not supported yet
+        self.options = None
+        #Mark: stream are not surpported yet
+        self.client_streaming = desc.client_streaming
+        self.server_streaming = desc.server_streaming
+
+    def method_lambda(self):
+        return '[](Service *s, %s *i, %s *o)->rpc_status {return reinterpret_cast<%s*>(s)->%s(i, o);}' % \
+               (self.input_ctype, self.output_ctype, self.service_class_name, self.names)
+    def service_add_method(self):
+        """
+        addMethod(new erpc::Method<myrpc_Input, myrpc_Output>(
+        "/myrpc.LEDControl/setColor",myrpc_Input_fields, myrpc_Output_fields,
+         [](Service *s, myrpc_Input *i, myrpc_Output *o)->rpc_status
+         {return reinterpret_cast<myrpc_LEDControl_Service*>(s)->setColor(i, o);},this));
+        """
+        result =    '       addMethod(new erpc::Method<%s, %s>(\n' \
+                    '               %s, %s, %s,\n' \
+                    '               %s,\n'\
+                    '               this));\n' % \
+                  (self.input_ctype, self.output_ctype, self.method_full_name_refrence, self.input_ctype + 'fields', self.output_ctype + 'fields',
+                   self.method_lambda())
+        return result
+    def method_decl(self):
+        '''
+        Return the declaration of the method
+            virtual rpc_status %s(%s *request, %s *response);
+        '''
+        return '    virtual rpc_status %s(%s *request, %s *response);\n' % (self.names, self.input_ctype, self.output_ctype)
+    def server_stub(self, inclass=True):
+        '''
+        Return the stub of the service
+        /* Server stub */
+        rpc_status myrpc_LEDControl_Service::setColor(myrpc_Input *req, myrpc_Output *rsp) {
+            LOGW("/myrpc.LEDControl/setColor", "Service Unimplemented!\n");
+            return rpc_status::UnimplmentedService;
+        }
+        if in classs, add indent of 4 spaces
+        '''
+        indent = '    ' if inclass else ''
+        result =  indent + "rpc_status %s::%s(%s *req, %s *rsp) {\n" % (self.service_class_name, self.names, self.input_ctype, self.output_ctype)
+        result += indent + "    LOGW(%s, \"Service Unimplemented!\");\n" % self.method_full_name_refrence
+        result += indent + "    return rpc_status::UnimplmentedService;\n"
+        result += indent + "}\n"
+        return result
+
+
+    def client_stub(self):
+        '''
+        /* Client stub */
+        rpc_status myrpc_LEDControl_Client::setColor(myrpc_Input *req, myrpc_Output *rsp) {
+            return performRequest(const_cast<char *>(method_full_name_refrence), myrpc_Input_fields, (void *) req, myrpc_Output_fields, (void *) rsp);
+        }
+        Return the stub of the method
+        '''
+        result = "rpc_status %s::%s(%s *req, %s *rsp) {\n" % (self.client_class_name, self.names, self.input_ctype, self.output_ctype)
+        result += "    return performRequest(const_cast<char *>(%s), %s, (void *) req, %s, (void *) rsp);\n" % \
+                  (self.method_full_name_refrence, self.input_ctype + 'fields', self.output_ctype + 'fields')
+        result += "}\n"
+        return result
+
+
+
+
+# Mycode: ServiceDescriptorProto类实现
+class Service(ProtoElement):
+    def __init__(self, names, desc, service_options, element_path, comments):
+        '''
+        desc is ServiceDescripto
+        index is the index of this service element inside the file
+        comments is a dictionary mapping between element path & SourceCodeInfo.Location
+            (contains information about source comments)
+        '''
+        super(Service, self).__init__(element_path, comments)
+        
+        # Mark: service options are not supported yet
+        self.options = None
+        self.names = names
+        self.service_classnames = Globals.naming_style.service_class_name(names)
+        self.client_classnames = Globals.naming_style.client_class_name(names)
+        self.package = names.parts[-2]
+        self.methods = [Method(self.names + x.name, x, None, element_path + (self.METHOD, i), comments) for i, x in enumerate(desc.method)]
+    def service_constructor_begin(self):
+        '''
+        myrpc_LEDControl_Servic::myrpc_LEDControl_Service() {
+            addMethod(new erpc::Method<myrpc_Input, myrpc_Output>(
+                    "/myrpc.LEDControl/setColor",myrpc_Input_fields, myrpc_Output_fields,
+                     [](Service *s, myrpc_Input *i, myrpc_Output *o)->rpc_status{return reinterpret_cast<myrpc_LEDControl_Service*>(s)->setColor(i, o);}
+                     ,this));
+        }
+        '''
+        return '%s::%s() {\n' % (self.service_classnames, self.service_classnames)
+
+    def service_constructor_end(self):
+        return '}\n'
+
+    def service_class_begin(self):
+        '''
+        Return the beginning of the service class.
+        class myrpc_LEDControl_Service: public erpc::Service {
+        public:
+            myrpc_LEDControl_Service() {}
+            virtual ~myrpc_LEDControl_Service() {}
+        '''
+        return 'class %s : public erpc::Service {\npublic:\n    %s();\n    virtual ~%s() {}\n' % \
+                (self.service_classnames, self.service_classnames, self.service_classnames)
+
+    def service_class_end(self):
+        '''
+        Return the end of the service class.
+        };
+        '''
+        return '};\n'
+    def service_enumid(self):
+        '''
+        static const char* Greeter_method_names[] = {
+          "/helloworld.Greeter/SayHello",
+        };
+        '''
+        result = 'static const char* %s_method_names[] = {\n' % self.names
+        for method in self.methods:
+            result += '    "%s",\n' % method.method_full_name
+        result += '};\n'
+        return result
+
+    def client_class_begin(self):
+        '''
+        Return the stub of the client
+        class myrpc_LEDControl_Client: public erpc::Client {
+        public:
+            myrpc_LEDControl_Client(const char *host, uint16_t port): erpc::Client(host, port) {}
+            virtual ~myrpc_LEDControl_Client() {}
+        '''
+        return 'class %s : public erpc::Client {\npublic:\n    %s(const char *host, uint16_t port): erpc::Client(host, port) {}\n    virtual ~%s() {}\n' % \
+                (self.client_classnames, self.client_classnames, self.client_classnames)
+
+
+    def client_class_end(self):
+        '''
+        Return the end of the client class
+        };
+        '''
+        return '};\n'
 
 
 class Enum(ProtoElement):
@@ -555,7 +730,7 @@ class Field(ProtoElement):
         self.callback_datatype = field_options.callback_datatype
         self.math_include_required = False
         self.sort_by_tag = field_options.sort_by_tag
-        
+
         if field_options.type == nanopb_pb2.FT_INLINE:
             # Before nanopb-0.3.8, fixed length bytes arrays were specified
             # by setting type to FT_INLINE. But to handle pointer typed fields,
@@ -621,7 +796,7 @@ class Field(ProtoElement):
             if can_be_static:
                 field_options.type = nanopb_pb2.FT_STATIC
             else:
-                field_options.type = field_options.fallback_type
+                field_options.type = nanopb_pb2.FT_POINTER #field_options.fallback_type
 
         if field_options.type == nanopb_pb2.FT_STATIC and not can_be_static:
             raise Exception("Field '%s' is defined as static, but max_size or "
@@ -1625,21 +1800,26 @@ class Message(ProtoElement):
 
 def iterate_messages(desc, flatten = False, names = Names(), comment_path = ()):
     '''Recursively find all messages. For each, yield name, DescriptorProto, comment_path.'''
+    # 对于FileDescriptorProto,其中的message字段为message_type
     if hasattr(desc, 'message_type'):
         submsgs = desc.message_type
         comment_path += (ProtoElement.MESSAGE,)
+    # 对于DescriptorProto,其中的message字段为nested_type
     else:
         submsgs = desc.nested_type
         comment_path += (ProtoElement.NESTED_TYPE,)
 
+    # 对repeated字段迭代
     for idx, submsg in enumerate(submsgs):
         sub_names = names + submsg.name
         sub_path = comment_path + (idx,)
+        #若要进行展开,则会把名字的每个部分用'_'连接起来
         if flatten:
             yield Names(submsg.name), submsg, sub_path
         else:
             yield sub_names, submsg, sub_path
 
+        # 递归查找message内嵌套的message
         for x in iterate_messages(submsg, flatten, sub_names, sub_path):
             yield x
 
@@ -1650,6 +1830,7 @@ def iterate_extensions(desc, flatten = False, names = Names()):
     for extension in desc.extension:
         yield names, extension
 
+    #extension本身可以包含extension,需要递归查找
     for subname, subdesc, comment_path in iterate_messages(desc, flatten, names):
         for extension in subdesc.extension:
             yield subname, extension
@@ -1792,6 +1973,8 @@ class ProtoFile:
         self.messages = []
         self.extensions = []
         self.manglenames = MangleNames(self.fdesc, self.file_options)
+        # mycode：添加服务字段
+        self.services = []
 
         # process source code comment locations
         # ignores any locations that do not contain any comment information
@@ -1801,6 +1984,7 @@ class ProtoFile:
             if location.leading_comments or location.leading_detached_comments or location.trailing_comments
         }
 
+        # 枚举类型不会嵌套包含,可以直接转换为enumerate进行遍历
         for index, enum in enumerate(self.fdesc.enum_type):
             name = self.manglenames.create_name(enum.name)
             enum_options = get_nanopb_suboptions(enum, self.file_options, name)
@@ -1836,6 +2020,15 @@ class ProtoFile:
 
             if field_options.type != nanopb_pb2.FT_IGNORE:
                 self.extensions.append(ExtensionField(name, extension, field_options))
+
+        # mycode： 解析服务字段
+        # service类型不会嵌套包含,可以直接转换为enumerate进行遍历
+        for index, service in enumerate(self.fdesc.service):
+            name = self.manglenames.create_name(service.name)
+            # Mark: 不支持service的options
+            service_path = (ProtoElement.SERVICE, index)
+            self.services.append(Service(name, service, None, service_path, self.comment_locations))
+
 
     def add_dependency(self, other):
         for enum in other.enums:
@@ -1890,6 +2083,14 @@ class ProtoFile:
             # no %s specified - use whatever was passed in as options.libformat
             yield options.libformat
         yield '\n'
+        # MyCode : 生成service头文件
+        if self.services:
+            yield  '#include <server/service.hpp>\n'
+            yield  '#include <client/rpc_client.hpp>\n'
+            yield  '#include <rpc_status.hpp>\n'
+            yield  '#include <pb_encode.h>\n'
+            yield  '#include <pb_decode.h>\n'
+            yield  '#include <functional>\n'
 
         for incfile in self.file_options.include:
             # allow including system headers
@@ -2046,6 +2247,32 @@ class ProtoFile:
                   if hasattr(msg,'msgid'):
                       yield '#define %s_msgid %d\n' % (msg.name, msg.msgid)
               yield '\n'
+        # MyCode：Services
+        if self.services:
+
+            if self.services:
+                yield '/* Service Definations */\n'
+                for service in self.services:
+                    yield service.service_class_begin()
+                    # declaration
+                    for method in service.methods:
+                        yield method.method_decl() + ";"
+                    # id
+                    yield '\n'
+                    yield service.service_class_end()
+                yield '\n'
+
+            #Clients
+            yield '/* Client Defination */\n'
+            for service in self.services:
+                yield service.client_class_begin()
+                # declaration
+                for method in service.methods:
+                    yield method.method_decl()
+                yield service.client_class_end()
+
+
+
 
         # Check if there is any name mangling active
         pairs = [x for x in self.manglenames.reverse_name_mapping.items() if str(x[0]) != str(x[1])]
@@ -2152,6 +2379,35 @@ class ProtoFile:
 
         yield '\n'
 
+        # MyCode: Service generation
+        if self.services:
+             # MyCode: Generate name table
+            yield '/* Name table */\n'
+            for service in self.services:
+                yield service.service_enumid()
+
+            yield '/* Method Registration */\n'
+            for service in self.services:
+                yield service.service_constructor_begin()
+                for method in service.methods:
+                    yield method.service_add_method()
+                yield service.service_constructor_end()
+
+
+            # MyCode: Generate stub:
+            if self.services:
+                yield '/* Server stub */\n'
+                for service in self.services:
+                    for method in service.methods:
+                        yield method.server_stub(inclass=False)
+                        yield '\n'
+                yield '\n'
+                yield '/* Client stub */\n'
+                for service in self.services:
+                    for method in service.methods:
+                        yield method.client_stub()
+                        yield '\n'
+
         if Globals.protoc_insertion_points:
             yield '/* @@protoc_insertion_point(eof) */\n'
 
@@ -2220,6 +2476,7 @@ def get_nanopb_suboptions(subdesc, options, name):
         ext_type = nanopb_pb2.nanopb_msgopt
     elif isinstance(subdesc.options, descriptor.EnumOptions):
         ext_type = nanopb_pb2.nanopb_enumopt
+    #Mark： service options are not supported
     else:
         raise Exception("Unknown options type")
 
@@ -2252,9 +2509,9 @@ optparser.add_option("-x", dest="exclude", metavar="FILE", action="append", defa
     help="Exclude file from generated #include list.")
 optparser.add_option("-e", "--extension", dest="extension", metavar="EXTENSION", default=".pb",
     help="Set extension to use instead of '.pb' for generated files. [default: %default]")
-optparser.add_option("-H", "--header-extension", dest="header_extension", metavar="EXTENSION", default=".h",
+optparser.add_option("-H", "--header-extension", dest="header_extension", metavar="EXTENSION", default=".hpp",
     help="Set extension to use for generated header files. [default: %default]")
-optparser.add_option("-S", "--source-extension", dest="source_extension", metavar="EXTENSION", default=".c",
+optparser.add_option("-S", "--source-extension", dest="source_extension", metavar="EXTENSION", default=".cpp",
     help="Set extension to use for generated source files. [default: %default]")
 optparser.add_option("-f", "--options-file", dest="options_file", metavar="FILE", default="%s.options",
     help="Set name of a separate generator options file.")

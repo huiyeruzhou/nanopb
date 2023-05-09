@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ab5e5a8c-0238-44ac-8548-ef8c6346cffb" name="变更" comment="CRLF">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nanopb_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/nanopb_generator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pb.h" beforeDir="false" afterPath="$PROJECT_DIR$/../pb.h" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RESET_MODE" value="SOFT" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2022.2/remote_sources/739937144/-1171821208/google/protobuf/descriptor.py" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2NyDkTYnj2bYqJWJva2xf9WG26Q" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;//wsl$/Moon/home/huiyeruzhou/Documents/WorkSpace/ESP-IDF/rpc/components/myrpc/nanopb/generator&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="ab5e5a8c-0238-44ac-8548-ef8c6346cffb" name="变更" comment="" />
+      <created>1680627571530</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1680627571530</updated>
+      <workItem from="1680627572929" duration="5273000" />
+      <workItem from="1680637563693" duration="22835000" />
+      <workItem from="1680777151298" duration="1736000" />
+      <workItem from="1681029861211" duration="323000" />
+      <workItem from="1681032777069" duration="5339000" />
+      <workItem from="1681311199037" duration="1115000" />
+      <workItem from="1681392247123" duration="1897000" />
+      <workItem from="1681474046536" duration="2043000" />
+      <workItem from="1681503373273" duration="597000" />
+      <workItem from="1682172500169" duration="7259000" />
+      <workItem from="1682342859606" duration="5000" />
+      <workItem from="1682363690604" duration="9000" />
+      <workItem from="1682605338029" duration="772000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="CRLF" />
+    <option name="LAST_COMMIT_MESSAGE" value="CRLF" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/generator$nanopb_generator.coverage" NAME="nanopb_generator 覆盖结果" MODIFIED="1680639538420" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/generator$nanopb_generator__1_.coverage" NAME="nanopb_generator 覆盖结果" MODIFIED="1680640471155" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
