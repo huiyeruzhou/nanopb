@@ -2254,11 +2254,12 @@ class ProtoFile:
                 yield '/* Service Definations */\n'
                 for service in self.services:
                     yield service.service_class_begin()
+                    # using
+                    yield    '\tusing erpc::Service::Service;\n'
+                    yield    '\tusing erpc::Service::addMethod;\n'
                     # declaration
                     for method in service.methods:
-                        yield method.method_decl() + ";"
-                    # id
-                    yield '\n'
+                        yield method.method_decl()
                     yield service.service_class_end()
                 yield '\n'
 
@@ -2266,6 +2267,9 @@ class ProtoFile:
             yield '/* Client Defination */\n'
             for service in self.services:
                 yield service.client_class_begin()
+                # using
+                yield    '\tusing erpc::Client::open;\n'
+                yield    '\tusing erpc::Client::Client;\n'
                 # declaration
                 for method in service.methods:
                     yield method.method_decl()
