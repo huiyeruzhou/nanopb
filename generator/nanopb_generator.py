@@ -398,7 +398,7 @@ class ProtoElement(object):
 
 # MyCode : MethodDescriptorProto类实现
 class Method(ProtoElement):
-    def __init__(self, names, desc, method_options, element_path, comments):
+    def __init__(self, names, package, desc, method_options, element_path, comments):
         '''
         desc is MethodDescriptor
         index is the index of this method element inside the service
@@ -414,7 +414,7 @@ class Method(ProtoElement):
         # lookslike : <service_name>_method_names[id]
         self.method_full_name_refrence = str(self.service + 'method' + 'names') + '[%d]' % self.element_path[-1]
         # lookslike : /<package_name>.<service_name>/<method_name>
-        self.method_full_name = '/' + str(names.parts[-3]) + '.' + str(names.parts[-2]) + '/' + str(names.parts[-1])
+        self.method_full_name = '/' + package + '.' + str(names.parts[-2]) + '/' + str(names.parts[-1])
         self.names = Names(names.parts[-1])
         self.input_ctype = names_from_type_name(desc.input_type)
         self.output_ctype = names_from_type_name(desc.output_type)
@@ -437,7 +437,7 @@ class Method(ProtoElement):
         result =    '       addMethod(new erpc::Method<%s, %s>(\n' \
                     '               %s, %s, %s,\n' \
                     '               %s,\n'\
-                    '               this));\n' % \
+                    '               std::shared_ptr<erpc::Service>(this)));\n' % \
                   (self.input_ctype, self.output_ctype, self.method_full_name_refrence, self.input_ctype + 'fields', self.output_ctype + 'fields',
                    self.method_lambda())
         return result
@@ -484,7 +484,7 @@ class Method(ProtoElement):
 
 # Mycode: ServiceDescriptorProto类实现
 class Service(ProtoElement):
-    def __init__(self, names, desc, service_options, element_path, comments):
+    def __init__(self, names, package, desc, service_options, element_path, comments):
         '''
         desc is ServiceDescripto
         index is the index of this service element inside the file
@@ -498,8 +498,8 @@ class Service(ProtoElement):
         self.names = names
         self.service_classnames = Globals.naming_style.service_class_name(names)
         self.client_classnames = Globals.naming_style.client_class_name(names)
-        self.package = names.parts[-2]
-        self.methods = [Method(self.names + x.name, x, None, element_path + (self.METHOD, i), comments) for i, x in enumerate(desc.method)]
+        self.package = package
+        self.methods = [Method(self.names + x.name, self.package, x, None, element_path + (self.METHOD, i), comments) for i, x in enumerate(desc.method)]
     def service_constructor_begin(self):
         '''
         myrpc_LEDControl_Servic::myrpc_LEDControl_Service() {
@@ -2027,7 +2027,7 @@ class ProtoFile:
             name = self.manglenames.create_name(service.name)
             # Mark: 不支持service的options
             service_path = (ProtoElement.SERVICE, index)
-            self.services.append(Service(name, service, None, service_path, self.comment_locations))
+            self.services.append(Service(name, self.fdesc.package, service, None, service_path, self.comment_locations))
 
 
     def add_dependency(self, other):
@@ -2085,12 +2085,14 @@ class ProtoFile:
         yield '\n'
         # MyCode : 生成service头文件
         if self.services:
-            yield  '#include <server/service.hpp>\n'
-            yield  '#include <client/rpc_client.hpp>\n'
             yield  '#include <rpc_status.hpp>\n'
             yield  '#include <pb_encode.h>\n'
             yield  '#include <pb_decode.h>\n'
+            yield  '#include <memory>\n'
             yield  '#include <functional>\n'
+            yield  '#include <server/service.hpp>\n'
+            yield  '#include <client/rpc_client.hpp>\n'
+            yield  '#include <server/simple_server.hpp>\n'
 
         for incfile in self.file_options.include:
             # allow including system headers
@@ -2247,6 +2249,15 @@ class ProtoFile:
                   if hasattr(msg,'msgid'):
                       yield '#define %s_msgid %d\n' % (msg.name, msg.msgid)
               yield '\n'
+
+        # Check if there is any name mangling active
+        pairs = [x for x in self.manglenames.reverse_name_mapping.items() if str(x[0]) != str(x[1])]
+        if pairs:
+            yield '/* Mapping from canonical names (mangle_names or overridden package name) */\n'
+            for shortname, longname in pairs:
+                yield '#define %s %s\n' % (longname, shortname)
+            yield '\n'
+
         # MyCode：Services
         if self.services:
 
@@ -2274,17 +2285,6 @@ class ProtoFile:
                 for method in service.methods:
                     yield method.method_decl()
                 yield service.client_class_end()
-
-
-
-
-        # Check if there is any name mangling active
-        pairs = [x for x in self.manglenames.reverse_name_mapping.items() if str(x[0]) != str(x[1])]
-        if pairs:
-            yield '/* Mapping from canonical names (mangle_names or overridden package name) */\n'
-            for shortname, longname in pairs:
-                yield '#define %s %s\n' % (longname, shortname)
-            yield '\n'
 
         yield '#ifdef __cplusplus\n'
         yield '} /* extern "C" */\n'
