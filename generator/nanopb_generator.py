@@ -437,7 +437,7 @@ class Method(ProtoElement):
         result =    '       addMethod(new erpc::Method<%s, %s>(\n' \
                     '               %s, %s, %s,\n' \
                     '               %s,\n'\
-                    '               std::shared_ptr<erpc::Service>(this)));\n' % \
+                    '               self));\n' % \
                   (self.input_ctype, self.output_ctype, self.method_full_name_refrence, self.input_ctype + 'fields', self.output_ctype + 'fields',
                    self.method_lambda())
         return result
@@ -509,7 +509,8 @@ class Service(ProtoElement):
                      ,this));
         }
         '''
-        return '%s::%s() {\n' % (self.service_classnames, self.service_classnames)
+        return '%s::%s() {\n' % (self.service_classnames, self.service_classnames) + \
+               '    auto self = std::shared_ptr<Service>(this);\n'
 
     def service_constructor_end(self):
         return '}\n'
@@ -2279,6 +2280,7 @@ class ProtoFile:
             for service in self.services:
                 yield service.client_class_begin()
                 # using
+                yield    '\tusing erpc::Client::close;\n'
                 yield    '\tusing erpc::Client::open;\n'
                 yield    '\tusing erpc::Client::Client;\n'
                 # declaration
